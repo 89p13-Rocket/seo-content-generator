@@ -1,7 +1,11 @@
 import Link from "next/link";
-import { articles, SITE_URL } from "@/lib/articles";
+import { getArticles, SITE_URL } from "@/lib/articles";
 
-export default function HomePage() {
+export const revalidate = 60;
+
+export default async function HomePage() {
+  const articles = await getArticles();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
