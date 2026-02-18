@@ -215,6 +215,113 @@ body {
   margin-bottom: 20px;
 }
 
+/* === LIQUE MIAMI CTA BLOCK === */
+.lique-cta-block {
+  margin-top: 64px;
+  padding: 40px 36px;
+  background: linear-gradient(135deg, rgba(185,141,75,.07) 0%, rgba(168,124,255,.04) 100%);
+  border: 1px solid rgba(185,141,75,.35);
+  position: relative;
+  overflow: hidden;
+}
+.lique-cta-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(185,141,75,.7), transparent);
+}
+.lique-cta-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.lique-cta-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--neon-amber);
+  text-shadow: 0 0 12px rgba(255,159,67,.3);
+  display: block;
+  margin-bottom: 10px;
+}
+.lique-cta-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-shadow: var(--glow-gold);
+  margin-bottom: 8px;
+}
+.lique-cta-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+.lique-cta-links {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.lique-cta-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: var(--sans);
+  font-weight: 500;
+  transition: background .3s, color .3s, box-shadow .3s, border-color .3s;
+}
+.lique-cta-btn--primary {
+  background: var(--gold);
+  color: var(--bg-deep);
+  border: 1px solid var(--gold);
+}
+.lique-cta-btn--primary:hover {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+  box-shadow: var(--glow-gold);
+}
+.lique-cta-btn--secondary {
+  background: transparent;
+  border: 1px solid rgba(185,141,75,.5);
+  color: var(--gold);
+}
+.lique-cta-btn--secondary:hover {
+  background: rgba(185,141,75,.1);
+  border-color: var(--gold);
+  box-shadow: var(--glow-gold);
+}
+.lique-cta-btn--outline {
+  background: transparent;
+  border: 1px solid rgba(255,159,67,.3);
+  color: var(--neon-amber);
+}
+.lique-cta-btn--outline:hover {
+  background: rgba(255,159,67,.08);
+  border-color: var(--neon-amber);
+  box-shadow: var(--glow-amber);
+}
+.lique-cta-info {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+.lique-cta-info span + span::before {
+  content: ' · ';
+  color: rgba(185,141,75,.4);
+  margin: 0 8px;
+}
+
 /* === FOOTER === */
 .footer {
   padding: 60px 0 40px;
@@ -250,6 +357,12 @@ body {
   .news-card-body { padding: 24px 20px 20px; }
   .article-title { font-size: 30px; }
   .article-section { padding: 100px 0 60px; }
+  .lique-cta-block { padding: 28px 20px; }
+  .lique-cta-title { font-size: 24px; letter-spacing: 4px; }
+  .lique-cta-links { flex-direction: column; align-items: center; gap: 10px; }
+  .lique-cta-btn { width: 100%; max-width: 260px; text-align: center; }
+  .lique-cta-info { flex-direction: column; align-items: center; gap: 4px; }
+  .lique-cta-info span + span::before { content: ''; margin: 0; display: block; }
 }
 
 @media (max-width: 480px) {

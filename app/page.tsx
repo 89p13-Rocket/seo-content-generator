@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getArticles, SITE_URL } from "@/lib/articles";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 export default async function HomePage() {
   const articles = await getArticles();

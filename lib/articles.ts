@@ -1,4 +1,4 @@
-import { supabase } from "./supabase";
+import { createServerSupabaseClient } from "./supabase-server";
 
 export interface Article {
   slug: string;
@@ -47,6 +47,7 @@ function mapPost(post: SupabasePost): Article {
 }
 
 export async function getArticles(): Promise<Article[]> {
+  const supabase = createServerSupabaseClient();
   const { data, error } = await supabase
     .from("posts")
     .select("id, slug, title, meta_description, content, tags, published_at, status")
@@ -60,6 +61,7 @@ export async function getArticles(): Promise<Article[]> {
 export async function getArticleBySlug(
   slug: string
 ): Promise<Article | undefined> {
+  const supabase = createServerSupabaseClient();
   const { data, error } = await supabase
     .from("posts")
     .select("id, slug, title, meta_description, content, tags, published_at, status")
@@ -72,6 +74,7 @@ export async function getArticleBySlug(
 }
 
 export async function getAllSlugs(): Promise<string[]> {
+  const supabase = createServerSupabaseClient();
   const { data, error } = await supabase
     .from("posts")
     .select("slug")

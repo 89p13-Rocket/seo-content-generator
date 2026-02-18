@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import sanitizeHtml from "sanitize-html";
 import { getArticleBySlug, getAllSlugs, SITE_URL } from "@/lib/articles";
 
-export const revalidate = 60;
+export const revalidate = 3600;
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -45,18 +47,7 @@ export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
 
-  if (!article) {
-    return (
-      <section className="article-section">
-        <div className="article-container">
-          <h1 className="article-title">Article not found</h1>
-          <Link href="/" className="article-back">
-            Back to News
-          </Link>
-        </div>
-      </section>
-    );
-  }
+  if (!article) notFound();
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -112,8 +103,59 @@ export default async function ArticlePage({ params }: Props) {
 
           <div
             className="article-body"
-            dangerouslySetInnerHTML={{ __html: article.content }}
+            dangerouslySetInnerHTML={{
+              __html: sanitizeHtml(article.content, {
+                allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+                  "h1", "h2", "h3", "h4", "h5", "h6", "img",
+                ]),
+                allowedAttributes: {
+                  ...sanitizeHtml.defaults.allowedAttributes,
+                  img: ["src", "alt", "width", "height"],
+                  a: ["href", "title", "target", "rel"],
+                },
+                allowedSchemes: ["https", "http", "mailto"],
+              }),
+            }}
           />
+
+          <div className="lique-cta-block">
+            <div className="lique-cta-header">
+              <span className="lique-cta-label">Experience It Live</span>
+              <h3 className="lique-cta-title">LIQUE Miami</h3>
+              <p className="lique-cta-sub">Waterfront restaurant &amp; nightclub · North Miami Beach</p>
+            </div>
+            <div className="lique-cta-links">
+              <a
+                href="https://lique-miami-present-production.up.railway.app/#contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lique-cta-btn lique-cta-btn--primary"
+              >
+                Reserve a Table
+              </a>
+              <a
+                href="https://lique.tripleseat.com/party_request/42471"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lique-cta-btn lique-cta-btn--secondary"
+              >
+                Book Private Event
+              </a>
+              <a
+                href="https://lique-miami-present-production.up.railway.app/#menu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lique-cta-btn lique-cta-btn--outline"
+              >
+                View Menu
+              </a>
+            </div>
+            <div className="lique-cta-info">
+              <span>3957 NE 163rd St, North Miami Beach</span>
+              <span>+1 (305) 705-2425</span>
+              <span>Fri–Sat open until 2 AM</span>
+            </div>
+          </div>
         </div>
       </section>
     </>
