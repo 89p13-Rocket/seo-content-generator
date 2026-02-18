@@ -316,7 +316,20 @@ body {
   color: var(--text-muted);
   letter-spacing: 0.5px;
 }
-.lique-cta-info span + span::before {
+.lique-cta-address {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: rgba(185,141,75,.3);
+  text-underline-offset: 3px;
+  transition: color .3s, text-decoration-color .3s;
+}
+.lique-cta-address:hover {
+  color: var(--gold);
+  text-decoration-color: rgba(185,141,75,.7);
+}
+.lique-cta-info span + span::before,
+.lique-cta-info span + a::before,
+.lique-cta-info a + span::before {
   content: ' · ';
   color: rgba(185,141,75,.4);
   margin: 0 8px;

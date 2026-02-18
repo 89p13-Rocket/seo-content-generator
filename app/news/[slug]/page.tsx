@@ -151,7 +151,14 @@ export default async function ArticlePage({ params }: Props) {
               </a>
             </div>
             <div className="lique-cta-info">
-              <span>3957 NE 163rd St, North Miami Beach</span>
+              <a
+                href="https://maps.google.com/?q=3957+NE+163rd+St,+North+Miami+Beach,+FL+33160"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lique-cta-address"
+              >
+                3957 NE 163rd St, North Miami Beach
+              </a>
               <span>+1 (305) 705-2425</span>
               <span>Fri–Sat open until 2 AM</span>
             </div>
