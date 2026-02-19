@@ -435,8 +435,12 @@ body {
   .news-section { padding: 80px 0 80px; }
   .news-grid { grid-template-columns: 1fr; gap: 20px; }
   .news-card-body { padding: 24px 20px 20px; }
-  .article-title { font-size: 30px; }
   .article-section { padding: 100px 0 60px; }
+  .article-back { margin-bottom: 40px; }
+  .article-meta-short { display: none; }
+  .article-meta-icon { display: none; }
+  .article-meta-row { gap: 0; }
+  .article-title { font-size: 28px; }
   .lique-cta-block { padding: 28px 20px; }
   .lique-cta-title { font-size: 24px; letter-spacing: 4px; }
   .lique-cta-links { flex-direction: column; align-items: center; gap: 10px; }
