@@ -43,12 +43,21 @@ export const metadata: Metadata = {
     title: SITE_NAME,
     description:
       "Latest news, events, and stories from LIQUE Miami — Miami's premier waterfront restaurant and nightlife lounge.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "LIQUE Miami — News & Stories",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_NAME,
     description:
       "Latest news, events, and stories from LIQUE Miami — Miami's premier waterfront restaurant and nightlife lounge.",
+    images: ["/opengraph-image"],
   },
   alternates: {
     canonical: SITE_URL,
