@@ -49,6 +49,8 @@ export default async function ArticlePage({ params }: Props) {
 
   if (!article) notFound();
 
+  const shortTitle = article.title.split(" ").slice(0, 3).join(" ");
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -94,9 +96,13 @@ export default async function ArticlePage({ params }: Props) {
             All News
           </Link>
 
-          <time className="article-meta-date" dateTime={article.dateISO}>
-            {article.date}
-          </time>
+          <div className="article-meta-row">
+            <span className="article-meta-short">{shortTitle}</span>
+            <img src="/icon.svg" className="article-meta-icon" alt="" aria-hidden="true" />
+            <time className="article-meta-date" dateTime={article.dateISO}>
+              {article.date}
+            </time>
+          </div>
           <div className="article-meta-venue">{article.venue}</div>
 
           <h1 className="article-title">{article.title}</h1>

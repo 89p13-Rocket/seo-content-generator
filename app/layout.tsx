@@ -102,7 +102,8 @@ export default function RootLayout({
             <p className="footer-text">
               Miami&apos;s Premier Waterfront Restaurant &amp; Nightlife Lounge
             </p>
-            <span className="footer-ai">Powered by AI</span>
+            <p className="footer-copy">© 2026 Sharcon. All rights reserved.</p>
+            <a href="https://sharconai.com/" target="_blank" rel="noopener noreferrer" className="footer-ai">Powered by Sharcon</a>
           </div>
         </footer>
       </body>

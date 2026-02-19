@@ -1,0 +1,73 @@
+# LIQUE Miami — News & Stories
+
+> AI-powered news and stories hub for LIQUE Miami, a premium waterfront restaurant and nightlife lounge in North Miami Beach, Florida.
+
+This site publishes articles about Miami nightlife, dining trends, events, and stories connected to the LIQUE Miami brand. Content is generated and curated using AI automation.
+
+---
+
+## About LIQUE Miami
+
+LIQUE Miami is a premium waterfront restaurant and nightlife lounge located at 3957 NE 163rd St, North Miami Beach, FL 33160.
+
+The venue blends Mediterranean cuisine with live DJ entertainment and panoramic bay views, transitioning seamlessly from fine dining to late-night lounge throughout the evening.
+
+- Phone: +1 (305) 705-2425
+- Email: info@liquemiami.com
+- Website: https://liquemiami.com
+
+---
+
+## Hours of Operation
+
+- Monday–Thursday: 6 PM – 1 AM
+- Friday–Saturday: 4 PM – 2 AM
+- Sunday (Brunch + Evening): 12 PM – 12 AM
+
+---
+
+## Dining & Experience
+
+- Mediterranean cuisine: seafood, signature plates, artistic presentation
+- Sunday Brunch (12 PM – 4 PM)
+- Happy Hour with craft cocktails and appetizers
+- Full craft cocktail bar, premium spirits, champagne, curated wine list
+- Live DJs on Friday & Saturday (house and lounge music)
+- Waterfront terrace with panoramic Miami bay views
+
+---
+
+## Venue Spaces
+
+- **Outdoor Terrace** — Open-air waterfront lounge, up to 100 guests
+- **The Living Room** — Intimate indoor lounge with plush seating, up to 60 guests
+- **Exclusive Dining** — Private banquet-style space for milestone celebrations
+
+---
+
+## Private Events & Catering
+
+LIQUE Miami hosts private events for up to 160 guests.
+
+Services include:
+- Custom Mediterranean menus and curated cocktail packages
+- Premium bar packages and full-service catering
+- Live entertainment and A/V capabilities
+- Dedicated event coordinator
+
+Book a private event: https://lique.tripleseat.com/party_request/42471
+
+---
+
+## Reservations
+
+Reserve a table: https://lique-miami-present-production.up.railway.app/#contact
+
+---
+
+## This News Site
+
+- URL: https://ainewstest.vercel.app
+- Content: News, events, and stories about Miami dining, nightlife, and LIQUE Miami
+- Technology: Next.js 15, Supabase, AI-generated content via Google Gemini
+- Built and maintained by Sharcon (https://sharconai.com)
